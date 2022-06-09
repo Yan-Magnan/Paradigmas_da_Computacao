@@ -5,11 +5,11 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'sobre_nos.html')
+    return render(request, 'inicio/sobre_nos.html')
 
 
 def cardapio(request):
-    return HttpResponse('cardapio 1')
+    return HttpResponse('inicio/cardapio 1')
 
 
 def contato(request):
