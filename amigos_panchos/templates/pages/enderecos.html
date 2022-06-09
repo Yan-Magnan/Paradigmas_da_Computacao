@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <title>Amigos Pancho - Brasil</title>
+{% include 'partials/head.html' %}
 
-    <link rel="icon" type="image/x-icon" href="favicon/favicon-32x32.png">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <style>
-        .footer {
-            left: 0;
-            margin-top: 12rem;
-            bottom: 0;
-            width: 100%;
-            background-color: white;
-            color: black;
-            text-align: center;
-        }
-    </style>
-</head>
 <body>
 
 <!--Começo da navBar-->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light w-auto p-3">
     <div class="container-fluid">
         <div style="padding-left: 10%">
             <a class="navbar-brand" href="#">
@@ -37,18 +17,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item ">
-                    <a class="nav-link active fw-bold" aria-current="page" href="sobre_nos.html">Sobre Nós</a>
+                    <a class="nav-link fw-bold" aria-current="page" href="sobre_nos.html">Sobre Nós</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="cardapio.html">Cardápio</a>
+                    <a class="nav-link  fw-bold" href="cardapio.html">Cardápio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bold" href="contato.html">Contato</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="enderecos.html">Endereços</a>
+                    <a class="nav-link fw-bold active" href="enderecos.html">Endereços</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -60,9 +40,9 @@
                         <li><a class="dropdown-item" href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a></li>
                     </ul>
                 </li>
-                <li class="d-flex" style="margin-left: 25rem">
+                <li class="d-flex " style="margin-left: 25rem">
                     <a href="#login">
-                        <button type="button" class="btn btn-outline-success btn-small btn-nav">Login</button>
+                        <button type="button" class="btn btn-outline-success btn-small btn-nav ">Login</button>
                     </a>
                 </li>
             </ul>
@@ -70,41 +50,35 @@
     </div>
 </nav>
 
-<!--fim da navBar-->
 
-<!--margin-left: 10%; margin-top: 1rem-->
-<div class="  mb-3 border-light " style="; max-width: 1024px;margin-left: 10%; margin-top: 1rem">
-    <div class="row">
-        <div class="col-md-4">
-            <div id="carouselExampleControls2" class="carousel carousel-dark slide " data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img style="max-width: 100%" src="Imagem_Test/lanches/m.jpeg" class="d-block " alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img style="max-width: 100%" src="Imagem_Test/lanches/n.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img style="max-width: 100%" src="Imagem_Test/lanches/o.jpeg" class="d-block w-100" alt="...">
-                    </div>
+<div class="container px-4">
+    <div class="row gx-5 position-absolute top-50 start-50 translate-middle">
+        <div class="col">
+            <div class="card " style="width: 18rem;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.7178299681443!2d-51.16998859252726!3d-30.011851090847795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519777abcc1066b%3A0x18313e27fe2d2160!2sAmigo%20Panchos!5e0!3m2!1spt-PT!2sbr!4v1650156463830!5m2!1spt-PT!2sbr" width="280" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="card-body">
+                    <h5 class="card-title">Viaduto Obirici</h5>
+                    <a target="_blank" href="https://www.google.com/maps/place/Amigo+Panchos/@-30.0118511,-51.1699886,19z/data=!4m18!1m12!4m11!1m3!2m2!1d-51.1703668!2d-30.0116223!1m6!1m2!1s0x9519777abcc1066b:0x18313e27fe2d2160!2samigos+pancho!2m2!1d-51.1694364!2d-30.0120931!3m4!1s0x9519777abcc1066b:0x18313e27fe2d2160!8m2!3d-30.0120931!4d-51.1694364" class="btn btn-primary" class="btn btn-primary">Ver no Google Maps</a>
                 </div>
             </div>
         </div>
-        <div  class="col-md-8">
-<!--            style="width: 50rem"-->
-            <div  style="max-width: 50rem;" class="card-body">
-                <h5 class="card-title">Amigos Pancho</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Gostoso porque é feito com amor!</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat, nunc a fringilla dignissim, metus velit eleifend metus, eget iaculis velit sem sed nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In eget fermentum tortor. Etiam eu lorem in orci imperdiet tincidunt in sed nulla. In sed elit enim. Duis consequat vestibulum tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus finibus erat ac auctor.</p>
+        <div class="col">
+            <div class="card " style="width: 18rem;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2088.5468859533316!2d-51.1154436730511!3d-30.015102262754237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9519773ec1ccf9e9%3A0x529a9b52a920ba0c!2samigos%20pancho%20baltazar!3m2!1d-30.015601099999998!2d-51.114669899999996!5e0!3m2!1spt-PT!2sbr!4v1650157478966!5m2!1spt-PT!2sbr" width="280" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="card-body">
+                    <h5 class="card-title">Baltazar de Oliveira</h5>
+                    <a target="_blank" href="https://www.google.com/maps/dir//amigos+pancho+baltazar/@-30.0153743,-51.115339,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9519773ec1ccf9e9:0x529a9b52a920ba0c!2m2!1d-51.1146699!2d-30.0156011" class="btn btn-primary">Ver no Google Maps</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!--fim da navBar-->
+
+
+<!--teste-->
+<!--panchos-->
 
 
 
@@ -112,7 +86,8 @@
 
 
 <!--Footer html, css esta na tag styel-->
-<div class="footer position-relative bottom-0 start-50 translate-middle-x">
+
+<div class="footer position-fixed bottom-0 start-50 translate-middle-x">
     <div class="container">
         <hr>
         <div class="row row-cols-1 row-cols-lg-5 ">
@@ -155,6 +130,7 @@
         </div>
     </div>
 </div>
+
 
 <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
