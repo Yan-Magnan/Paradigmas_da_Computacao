@@ -16,3 +16,7 @@ def contato(request):
 
 def endereco(request):
     return render(request, 'pages/enderecos.html')
+
+
+def login(request):
+    return render(request, 'pages/login.html')

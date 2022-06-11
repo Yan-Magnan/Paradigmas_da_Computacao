@@ -1,9 +1,10 @@
 {% load static %}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light w-auto p-3">
     <div class="container-fluid">
         <div style="padding-left: 10%">
-            <a class="navbar-brand" href="#">
-                <img src="Imagem_Test/logo.png" style="max-height: 5rem" >
+            <a class="navbar-brand" href="{% url 'sobre-nos' %}">
+                <img src="{% static 'navBar/logo.png' %}" style="max-height: 3rem" >
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +17,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
+<!--                    active-->
+                    <a class="nav-link  fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bold" href="{% url 'contato' %}">Contato</a>
@@ -31,12 +33,12 @@
                         Delivery
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://www.ifood.com.br/delivery/porto-alegre-rs/amigo-pancho-e-muito--sao-sebastiao/b076d006-72d3-469d-bbb8-51b3c45d9b7b">Ifood</a></li>
-                        <li><a class="dropdown-item" href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.ifood.com.br/delivery/porto-alegre-rs/amigo-pancho-e-muito--sao-sebastiao/b076d006-72d3-469d-bbb8-51b3c45d9b7b">Ifood</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a></li>
                     </ul>
                 </li>
                 <li class="d-flex " style="margin-left: 25rem">
-                    <a href="#login">
+                    <a href="{% url 'login' %}">
                         <button type="button" class="btn btn-outline-success btn-small btn-nav">Login</button>
                     </a>
                 </li>

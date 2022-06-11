@@ -7,6 +7,7 @@ urlpatterns = [
     path('cardapio/', views.cardapio, name='cardapio'),
     path('contato/', views.contato, name='contato'),
     path('endereco/', views.endereco, name='endereco'),
+    path('login/', views.login, name='login'),
     # path('', home),
 
 ]
