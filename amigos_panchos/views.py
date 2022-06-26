@@ -1,20 +1,26 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-
-# Create your views here.
+from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'inicio/sobre_nos.html')
+    return render(request, 'pages/sobre_nos.html')
 
 
 def cardapio(request):
-    return HttpResponse('inicio/cardapio 1')
+    return render(request, 'pages/cardapio.html')
 
 
 def contato(request):
-    return HttpResponse('contato 1')
+    return render(request, 'pages/contato.html')
 
 
 def endereco(request):
-    return HttpResponse('endereco 1')
+    return render(request, 'pages/enderecos.html')
+
+
+def login(request):
+    return render(request, 'pages/login.html')
+
+
+def cadastro(request):
+    return render(request, 'pages/cadastro.html')

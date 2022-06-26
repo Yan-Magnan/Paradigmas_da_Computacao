@@ -1,12 +1,15 @@
 from django.urls import path
-from amigos_panchos.views import home, cardapio, contato, endereco
 
+from amigos_panchos import views
 
 urlpatterns = [
-    path('', home),
-    path('cardapio/', cardapio),
-    path('contato/', contato),
-    path('endereco/', endereco),
+    path('', views.home, name='sobre-nos'),
+    path('cardapio/', views.cardapio, name='cardapio'),
+    path('contato/', views.contato, name='contato'),
+    path('endereco/', views.endereco, name='endereco'),
+    path('login/', views.login, name='login'),
+    path('cadastro/', views.cadastro, name='cadastro'),
+
     # path('', home),
 
 ]

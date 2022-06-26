@@ -1,0 +1,48 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light w-auto p-3">
+    <div class="container-fluid">
+        <div style="padding-left: 10%">
+            <a class="navbar-brand" href="{% url 'sobre-nos' %}">
+                <img src="{% static 'navBar/logo.png' %}" style="max-height: 3rem" >
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link fw-bold" aria-current="page" href="{% url 'sobre-nos' %}">Sobre Nós</a>
+                </li>
+
+                <li class="nav-item">
+<!--                    active-->
+                    <a class="nav-link  fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="{% url 'contato' %}">Contato</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="{% url 'endereco' %}">Endereços</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Delivery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" target="_blank" href="https://www.ifood.com.br/delivery/porto-alegre-rs/amigo-pancho-e-muito--sao-sebastiao/b076d006-72d3-469d-bbb8-51b3c45d9b7b">Ifood</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a></li>
+                    </ul>
+                </li>
+                <li class="d-flex " style="margin-left: 25rem">
+                    <a href="{% url 'login' %}">
+                        <button type="button" class="btn btn-outline-success btn-small btn-nav">Login</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
