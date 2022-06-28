@@ -8,6 +8,8 @@ urlpatterns = [
     path('contato/', views.contato, name='contato'),
     path('endereco/', views.endereco, name='endereco'),
     path('login/', views.login, name='login'),
+    path('cadastro/', views.cadastro, name='cadastro'),
+
     # path('', home),
 
 ]
