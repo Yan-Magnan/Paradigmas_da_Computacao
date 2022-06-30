@@ -13,7 +13,7 @@
 * Back-end
 
 ## Integrantes do grupo | Funções:
-* Christian Cabral: |
+* Christian Cabral: | Back-end
 * Guilherme Dias: |
 * Vinicius Salmoria: |
 * Vitor Lima: |
