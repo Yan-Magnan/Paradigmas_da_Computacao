@@ -8,172 +8,337 @@
 {% include 'partials/navbar.html' %}
 <!--fim da navBar-->
 
+
 <!--panchos-->
+
 
 <!--accordion w-75 p-3 position-absolute top-30 start-50 translate-middle-x-->
 <!--position-absolute top-50 start-50 translate-middle-->
-<div style="top: 15%" class="accordion position-absolute w-75    start-50 translate-middle-x" id="accordionExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <b>Panchos</b>
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <!------------------->
-                <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div style="margin-left: 50px" class="carousel-item active">
-                            <div style="margin-top: 1rem" class="container">
-                                <div class="row">
-                                    <div class="col-sm">
+{#<div style="top: 15%" class="accordion position-absolute w-75    start-50 translate-middle-x" id="accordionExample">#}
+{#    <div class="accordion-item">#}
+{#        <h2 class="accordion-header" id="headingOne">#}
+{#            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"#}
+{#                    aria-expanded="true" aria-controls="collapseOne">#}
+{#                <b>Panchos</b>#}
+{#            </button>#}
+{#        </h2>#}
+{#        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"#}
+{#             data-bs-parent="#accordionExample">#}
+{#            <div class="accordion-body">#}
+{#                <!------------------->#}
+{#                <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">#}
+{##}
+{#                -----------------------------------------------------------------------------------------------------#}
+{##}
+{#                    <div class="carousel-inner">#}
+{##}
+{#                        <div style="margin-left: 50px" class="carousel-item active">#}
+{#                            <div style="margin-top: 1rem" class="container">#}
+{#                                <div class="card-collumns mt-4">#}
+{#                                    {% for pancho in panchos %}#}
+{##}
+{#                                        <div class="card " style="width: 18rem; display: inline-block;">#}
+{#                                            {% load static %}#}
+{#                                            <img src="{% static 'sobreNos/n.jpeg' %}" class="card-img-top"#}
+{#                                                 alt="...">#}
+{#                                            <div class="card-body">#}
+{#                                                <h5 class="card-title">{{ pancho.nome }}</h5>#}
+{#                                            </div>#}
+{#                                            <div class="container overflow-hidden">#}
+{#                                                <div class="row gx-5">#}
+{#                                                    <div class="col">#}
+{#                                                        <a href="#" type="button" class="btn btn-success btn-md">Ver#}
+{#                                                            Mais#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                    <div class="col">#}
+{#                                                        <a href="{{ pancho.link }}" target="_blank" type="button"#}
+{#                                                           class="btn btn-danger btn-md">#}
+{#                                                            Comprar#}
+{#                                                        </a>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{##}
+{#            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"#}
+{#                    data-bs-slide="prev">#}
+{#                        <span class="carousel-control-prev-icon position-absolute bottom-50 start-0 "#}
+{#                              aria-hidden="false"></span>#}
+{#                <span class="visually-hidden ">Previous</span>#}
+{#            </button>#}
+{#            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"#}
+{#                    data-bs-slide="next">#}
+{#                        <span class="carousel-control-next-icon position-absolute bottom-50 end-0"#}
+{#                              aria-hidden="false"></span>#}
+{#                <span class="visually-hidden">Next</span>#}
+{#            </button>#}
+{#        </div>#}
+{#        <!------------------->#}
+{#    </div>#}
+{#</div>#}
 
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/p.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
-                                            </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+{#-------------------------------------------------------------------------------------------------------------------#}
+
+<div style="top: 15%; padding-bottom: 5%" class="accordion position-absolute w-75    start-50 translate-middle-x" id="accordionExample">
+    <div class="accordion-item">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                        Panchos
+                    </button>
+                </h2>
+
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                     aria-labelledby="panelsStayOpen-headingOne">
+                    {% for pancho in panchos %}
+                        <div class="accordion-body" style="display:inline-block;">
+                            <div class="container" style="">
+                                {#                                <div class="row">#}
+                                <div class="card " style="margin-left: 2rem; width: 18rem; display: inline-block;">
+                                    {% load static %}
+                                    {% if pancho.foto %}
+                                        <img style="max-width: 250px; height: auto" src="{{pancho.foto.url}}" class="card-img-top"
+                                         alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ pancho.nome }}</h5>
                                     </div>
-                                    <div class="col-sm">
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/q.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
+                                    <div class="container overflow-hidden">
+                                        <div class="row gx-5">
+                                            <div class="col">
+                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                    Mais
+                                                </a>
                                             </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm">
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/r.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
-                                            </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
+                                            <div class="col">
+                                                <a href="{{ pancho.link }}" target="_blank" type="button"
+                                                   class="btn btn-danger btn-md">
+                                                    Comprar
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {#                                </div>#}
                             </div>
                         </div>
-                        <div style="margin-left: 50px" class="carousel-item">
-                            <div style="margin-top: 1rem" class="container">
-                                <div class="row">
-                                    <div class="col-sm">
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/p.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
-                                            </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm">
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/q.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
-                                            </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm">
-                                        <div class="card " style="width: 18rem;">
-                                            <img src="Imagem_Test/lanches/r.jpeg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pancho</h5>
-                                            </div>
-                                            <div class="container overflow-hidden">
-                                                <div class="row gx-5">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success btn-md">Ver Mais</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-danger btn-md">Comprar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon position-absolute bottom-50 start-0 " aria-hidden="true"></span>
-                        <span class="visually-hidden ">Previous</span>
-                    </button>
-                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon position-absolute bottom-50 end-0" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    {% endfor %}
+
                 </div>
-                <!------------------->
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                        Burguer
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                     aria-labelledby="panelsStayOpen-headingTwo">
+                    {% for burguer in burguers %}
+                        <div class="accordion-body" style="display:inline-block;">
+                            <div class="container" style="">
+                                {#                                <div class="row">#}
+                                <div class="card " style=" width: 18rem; display: inline-block;">
+                                    {% load static %}
+                                    {% if burguer.foto %}
+                                        <img style="max-width: 250px; height: auto" src="{{burguer.foto.url}}" class="card-img-top"
+                                         alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ burguer.nome }}</h5>
+                                    </div>
+                                    <div class="container overflow-hidden">
+                                        <div class="row gx-5">
+                                            <div class="col">
+                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                    Mais
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="{{ burguer.link }}" target="_blank" type="button"
+                                                   class="btn btn-danger btn-md">
+                                                    Comprar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                        Xis
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                     aria-labelledby="panelsStayOpen-headingThree">
+                    {% for xi in xis %}
+                        <div class="accordion-body" style="display:inline-block;">
+                            <div class="container" style="">
+                                <div class="card " style=" width: 18rem; display: inline-block;">
+                                    {% load static %}
+                                    {% if xi.foto %}
+                                        <img style="max-width: 250px; height: auto" src="{{xi.foto.url}}" class="card-img-top"
+                                         alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ xi.nome }}</h5>
+                                    </div>
+                                    <div class="container overflow-hidden">
+                                        <div class="row gx-5">
+                                            <div class="col">
+                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                    Mais
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="{{ xi.link }}" target="_blank" type="button"
+                                                   class="btn btn-danger btn-md">
+                                                    Comprar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFour">
+                        Fritas
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                     aria-labelledby="panelsStayOpen-headingFour">
+                    {% for frita in fritas %}
+                        <div class="accordion-body" style="display:inline-block;">
+                            <div class="container" style="">
+                                {#                                <div class="row">#}
+                                <div class="card " style=" width: 18rem; display: inline-block;">
+                                    {% load static %}
+                                    {% if frita.foto %}
+                                        <img style="max-width: 250px; height: auto" src="{{frita.foto.url}}" class="card-img-top"
+                                         alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ frita.nome }}</h5>
+                                    </div>
+                                    <div class="container overflow-hidden">
+                                        <div class="row gx-5">
+                                            <div class="col">
+                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                    Mais
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="{{ frita.link }}" target="_blank" type="button"
+                                                   class="btn btn-danger btn-md">
+                                                    Comprar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFive">
+                        Bebidas
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                     aria-labelledby="panelsStayOpen-headingFive">
+                    {% for bebida in bebidas %}
+                        <div class="accordion-body" style="display:inline-block;">
+                            <div class="container" style="">
+                                {#                                <div class="row">#}
+                                <div class="card " style=" width: 18rem; display: inline-block;">
+                                    {% load static %}
+                                    {% if bebida.foto %}
+                                        <img style="max-width: 250px; height: auto" src="{{bebida.foto.url}}" class="card-img-top"
+                                         alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ bebida.nome }}</h5>
+                                    </div>
+                                    <div class="container overflow-hidden">
+                                        <div class="row gx-5">
+                                            <div class="col">
+                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                    Mais
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="{{ bebida.link }}" target="_blank" type="button"
+                                                   class="btn btn-danger btn-md">
+                                                    Comprar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
             </div>
         </div>
+        <!------------------->
     </div>
 </div>
-
-
-
-
-
 <!--Footer html, css esta na tag styel-->
 
-{% include 'partials/footer.html' %}
+<div class="card text-center fixed-bottom" style="">
+    {% include 'partials/footer.html' %}
 
-<!--fim do footer-->
+    <!--fim do footer-->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    {#-------------------------------------------------------------------------------------------------------------------#}
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+
+</script>
 
 
 </body>

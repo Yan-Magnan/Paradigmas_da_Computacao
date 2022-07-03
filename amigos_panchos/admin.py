@@ -1,23 +1,50 @@
 from django.contrib import admin
 
-from amigos_panchos.models import Bebidas, Burguer, Fritas, Panchos
+from amigos_panchos.models import Categoria, Pancho, Burguer, Frita, Bebida, Xi
 
 
-@admin.register(Panchos)
-class PanchosAdmin(admin.ModelAdmin):
-    list_display = ("nome", "preço", "imagem")
+admin.site.register(Categoria)
+
+####                                                                            Pancho
+@admin.register(Pancho)
+class PanchoAdmin(admin.ModelAdmin):
+    list_display = ("id", "nome", "descricao", "preco", "link", "categoria")
+    list_filter = ("nome", "preco")
+    list_per_page = 10
+    search_fields = ("nome", "preco", "categoria")
 
 
+####                                                                            Burguer
 @admin.register(Burguer)
 class BurguerAdmin(admin.ModelAdmin):
-    list_display = ("nome", "preço", "imagem")
+    list_display = ("id", "nome", "descricao", "preco", "link", "categoria")
+    list_filter = ("nome", "preco")
+    list_per_page = 10
+    search_fields = ("nome", "preco", "categoria")
 
 
-@admin.register(Fritas)
-class Fritas(admin.ModelAdmin):
-    list_display = ("nome", "preço", "imagem")
+####                                                                            Xis
+@admin.register(Xi)
+class XiAdmin(admin.ModelAdmin):
+    list_display = ("id", "nome", "descricao", "preco", "link", "categoria")
+    list_filter = ("nome", "preco")
+    list_per_page = 10
+    search_fields = ("nome", "preco", "categoria")
 
 
-@admin.register(Bebidas)
-class BebidasAdmin(admin.ModelAdmin):
-    list_display = ("nome", "preço", "imagem")
+####                                                                            Frintas
+@admin.register(Frita)
+class FritaAdmin(admin.ModelAdmin):
+    list_display = ("id", "nome", "descricao", "preco", "link", "categoria")
+    list_filter = ("nome", "preco")
+    list_per_page = 10
+    search_fields = ("nome", "preco", "categoria")
+
+
+####                                                                            Bebidas
+@admin.register(Bebida)
+class BebidaAdmin(admin.ModelAdmin):
+    list_display = ("id", "nome", "descricao", "preco", "link", "categoria")
+    list_filter = ("nome", "preco")
+    list_per_page = 10
+    search_fields = ("nome", "preco", "categoria")
