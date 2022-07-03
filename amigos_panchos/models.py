@@ -9,7 +9,7 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nome
 
-
+####                                                                            Pancho
 class Pancho(models.Model):
     nome = models.CharField(max_length=255)
     descricao = models.TextField(max_length=1000)
@@ -67,6 +67,8 @@ class Bebida(models.Model):
     def __str__(self):
         return self.nome
 
+####                                                                            XIS
+
 class Xi(models.Model):
     nome = models.CharField(max_length=255)
     descricao = models.TextField(max_length=1000)
@@ -79,3 +81,13 @@ class Xi(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+####                                                                            Aba sobre
+
+class Sobre(models.Model):
+    descricao = models.TextField(max_length=1200)
+    foto = models.ImageField(blank=True, upload_to='fotosSobre/%Y/%m')
+
+    def __str__(self):
+        return self.descricao

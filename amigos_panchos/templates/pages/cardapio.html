@@ -12,81 +12,6 @@
 <!--panchos-->
 
 
-<!--accordion w-75 p-3 position-absolute top-30 start-50 translate-middle-x-->
-<!--position-absolute top-50 start-50 translate-middle-->
-{#<div style="top: 15%" class="accordion position-absolute w-75    start-50 translate-middle-x" id="accordionExample">#}
-{#    <div class="accordion-item">#}
-{#        <h2 class="accordion-header" id="headingOne">#}
-{#            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"#}
-{#                    aria-expanded="true" aria-controls="collapseOne">#}
-{#                <b>Panchos</b>#}
-{#            </button>#}
-{#        </h2>#}
-{#        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"#}
-{#             data-bs-parent="#accordionExample">#}
-{#            <div class="accordion-body">#}
-{#                <!------------------->#}
-{#                <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">#}
-{##}
-{#                -----------------------------------------------------------------------------------------------------#}
-{##}
-{#                    <div class="carousel-inner">#}
-{##}
-{#                        <div style="margin-left: 50px" class="carousel-item active">#}
-{#                            <div style="margin-top: 1rem" class="container">#}
-{#                                <div class="card-collumns mt-4">#}
-{#                                    {% for pancho in panchos %}#}
-{##}
-{#                                        <div class="card " style="width: 18rem; display: inline-block;">#}
-{#                                            {% load static %}#}
-{#                                            <img src="{% static 'sobreNos/n.jpeg' %}" class="card-img-top"#}
-{#                                                 alt="...">#}
-{#                                            <div class="card-body">#}
-{#                                                <h5 class="card-title">{{ pancho.nome }}</h5>#}
-{#                                            </div>#}
-{#                                            <div class="container overflow-hidden">#}
-{#                                                <div class="row gx-5">#}
-{#                                                    <div class="col">#}
-{#                                                        <a href="#" type="button" class="btn btn-success btn-md">Ver#}
-{#                                                            Mais#}
-{#                                                        </a>#}
-{#                                                    </div>#}
-{#                                                    <div class="col">#}
-{#                                                        <a href="{{ pancho.link }}" target="_blank" type="button"#}
-{#                                                           class="btn btn-danger btn-md">#}
-{#                                                            Comprar#}
-{#                                                        </a>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    {% endfor %}#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{##}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"#}
-{#                    data-bs-slide="prev">#}
-{#                        <span class="carousel-control-prev-icon position-absolute bottom-50 start-0 "#}
-{#                              aria-hidden="false"></span>#}
-{#                <span class="visually-hidden ">Previous</span>#}
-{#            </button>#}
-{#            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"#}
-{#                    data-bs-slide="next">#}
-{#                        <span class="carousel-control-next-icon position-absolute bottom-50 end-0"#}
-{#                              aria-hidden="false"></span>#}
-{#                <span class="visually-hidden">Next</span>#}
-{#            </button>#}
-{#        </div>#}
-{#        <!------------------->#}
-{#    </div>#}
-{#</div>#}
-
 
 {#-------------------------------------------------------------------------------------------------------------------#}
 
@@ -120,7 +45,7 @@
                                     <div class="container overflow-hidden">
                                         <div class="row gx-5">
                                             <div class="col">
-                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                <a href="{% url 'informacao' pancho.nome %}" type="button" class="btn btn-success btn-md">Ver
                                                     Mais
                                                 </a>
                                             </div>
@@ -166,7 +91,7 @@
                                     <div class="container overflow-hidden">
                                         <div class="row gx-5">
                                             <div class="col">
-                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                <a href="{% url 'informacao_burguer' burguer.nome %}" type="button" class="btn btn-success btn-md">Ver
                                                     Mais
                                                 </a>
                                             </div>
@@ -210,7 +135,7 @@
                                     <div class="container overflow-hidden">
                                         <div class="row gx-5">
                                             <div class="col">
-                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                <a href="{% url 'informacao_xis' xi.nome %}" type="button" class="btn btn-success btn-md">Ver
                                                     Mais
                                                 </a>
                                             </div>
@@ -254,7 +179,7 @@
                                     <div class="container overflow-hidden">
                                         <div class="row gx-5">
                                             <div class="col">
-                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                <a href="{% url 'informacao_fritas' frita.nome %}" type="button" class="btn btn-success btn-md">Ver
                                                     Mais
                                                 </a>
                                             </div>
@@ -299,7 +224,7 @@
                                     <div class="container overflow-hidden">
                                         <div class="row gx-5">
                                             <div class="col">
-                                                <a href="#" type="button" class="btn btn-success btn-md">Ver
+                                                <a href="{% url 'informacao_bebidas' bebida.nome %}" type="button" class="btn btn-success btn-md">Ver
                                                     Mais
                                                 </a>
                                             </div>

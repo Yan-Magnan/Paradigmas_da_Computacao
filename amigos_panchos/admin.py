@@ -1,9 +1,13 @@
 from django.contrib import admin
 
-from amigos_panchos.models import Categoria, Pancho, Burguer, Frita, Bebida, Xi
+from amigos_panchos.models import Categoria, Pancho, Burguer, Frita, Bebida, Xi, Sobre
 
 
 admin.site.register(Categoria)
+
+admin.site.register(Sobre)
+
+
 
 ####                                                                            Pancho
 @admin.register(Pancho)
