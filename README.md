@@ -14,7 +14,7 @@
 
 ## Integrantes do grupo | Funções:
 * Christian Cabral: | Back-end | Relatório
-* Guilherme Dias: |
+* Guilherme Dias: | Front-end
 * Vinicius Salmoria: |
 * Vitor Lima: |
 * Yan Magnan: Fron-end | Back-end
