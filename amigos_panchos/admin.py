@@ -8,7 +8,6 @@ admin.site.register(Categoria)
 admin.site.register(Sobre)
 
 
-
 ####                                                                            Pancho
 @admin.register(Pancho)
 class PanchoAdmin(admin.ModelAdmin):

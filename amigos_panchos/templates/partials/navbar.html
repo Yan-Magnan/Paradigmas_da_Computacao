@@ -1,47 +1,82 @@
 {% load static %}
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light w-auto p-3">
     <div class="container-fluid">
         <div style="padding-left: 10%">
             <a class="navbar-brand" href="{% url 'sobre-nos' %}">
-                <img src="{% static 'navBar/logo.png' %}" style="max-height: 3rem" >
+                <img src="{% static 'navBar/logo.png' %}" style="max-height: 3rem">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item ">
-                    <a class="nav-link fw-bold" aria-current="page" href="{% url 'sobre-nos' %}">Sobre Nós</a>
-                </li>
+                {% if request.get_full_path == "/" %}
+                    <li class="nav-item ">
+                        <a class="nav-link fw-bold active" aria-current="page" href="{% url 'sobre-nos' %}">Sobre Nós</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item ">
+                        <a class="nav-link fw-bold " aria-current="page" href="{% url 'sobre-nos' %}">Sobre
+                            Nós</a>
+                    </li>
+                {% endif %}
+                {#                                                                                          Cardápi#}
+                {% if request.get_full_path == "/cardapio/" %}
+                    <li class="nav-item">
+                        <a class="nav-link  active fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
+                    </li>
 
-                <li class="nav-item">
-<!--                    active-->
-                    <a class="nav-link  fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="{% url 'contato' %}">Contato</a>
-                </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link  fw-bold" href="{% url 'cardapio' %}">Cardápio</a>
+                    </li>
+                {% endif %}
 
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="{% url 'endereco' %}">Endereços</a>
-                </li>
+                {#                                                                                          Contato#}
+                {% if request.get_full_path == "/contato/" %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold active" href="{% url 'contato' %}">Contato</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="{% url 'contato' %}">Contato</a>
+                    </li>
+                {% endif %}
+                {#                                                                                          Contato#}
+
+                {% if request.get_full_path == "/endereco/" %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold active" href="{% url 'endereco' %}">Endereços</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="{% url 'endereco' %}">Endereços</a>
+                    </li>
+                {% endif %}
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         Delivery
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" target="_blank" href="https://www.ifood.com.br/delivery/porto-alegre-rs/amigo-panchos-e-muito-mais-costa-e-silva/5c4b4b91-5004-43b7-ba6e-9cc2997bf540">Ifood</a></li>
-                        <li><a class="dropdown-item" target="_blank" href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a></li>
+                        <li><a class="dropdown-item" target="_blank"
+                               href="https://www.ifood.com.br/delivery/porto-alegre-rs/amigo-panchos-e-muito-mais-costa-e-silva/5c4b4b91-5004-43b7-ba6e-9cc2997bf540">Ifood</a>
+                        </li>
+                        <li><a class="dropdown-item" target="_blank"
+                               href="https://www.rappi.com.br/restaurantes/900495522-Amigo-Panchos-e-Muito-">Rappi</a>
+                        </li>
                     </ul>
                 </li>
-{#                <li class="d-flex " style="margin-left: 25rem">#}
-{#                    <a href="{% url 'login' %}">#}
-{#                        <button type="button" class="btn btn-outline-success btn-small btn-nav">Login</button>#}
-{#                    </a>#}
-{#                </li>#}
+                {#                <li class="d-flex " style="margin-left: 25rem">#}
+                {#                    <a href="{% url 'login' %}">#}
+                {#                        <button type="button" class="btn btn-outline-success btn-small btn-nav">Login</button>#}
+                {#                    </a>#}
+                {#                </li>#}
             </ul>
         </div>
     </div>

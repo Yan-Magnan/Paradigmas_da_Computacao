@@ -8,66 +8,38 @@
 
 <!--fim da navBar-->
 
-<!--margin-left: 10%; margin-top: 1rem-->
-<div class="  mb-3 border-light " style="; max-width: 1024px;margin-left: 10%; margin-top: 1rem">
-    <div class="row">
-        <div class="col-md-4">
-            <div id="carouselExampleControls2" class="carousel carousel-dark slide " data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleControls2" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
 
-                        {% load static %}
-                        <img style="max-width: 100%" src="{% static 'sobreNos/m.jpeg' %}" class="d-block " alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img style="max-width: 100%" src="{% static 'sobreNos/n.jpeg' %}" class="d-block w-100"
-                             alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img style="max-width: 100%" src="{% static 'sobreNos/o.jpeg' %}" class="d-block w-100"
-                             alt="...">
-                    </div>
-                </div>
-            </div>
+<div class="card mb-3 w-75" style="max-width: 80%; margin-left: 13%">
+    <div class="row g-0">
+        <div class="col-md-4">
+            {% for sobre in sobre %}
+                <img style="max-width: 100%; height: auto" src="{{ sobre.foto.url }}"
+                     class="card-img-top"
+                     alt="...">
+            {% endfor %}
         </div>
         <div class="col-md-8">
-            <!--            style="width: 50rem"-->
-            <div style="max-width: 50rem;" class="card-body">
-
-                <div class="card" style="width: 50rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Amigos Pancho</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Gostoso porque é feito com amor!</h6>
-                        {% for sobre in sobre %}
-                            <p class="card-text">{{ sobre.descricao }}</p>
-                        {% endfor %}
-
-                    </div>
-                </div>
-
+            <div class="card-body">
+                <h5 class="card-title">Amigos Pancho</h5>
+                <p class="card-text">Gostoso porque é feito com amor!</p>
+                {% for sobre in sobre %}
+                    <p class="card-text">{{ sobre.descricao }}</p>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="card text-center fixed-bottom" style="">
-    {% include 'partials/footer.html' %}
+    <div class="card text-center fixed-bottom" style="">
+{% include 'partials/footer.html' %}
 
 
-    <!--fim do footer-->
+<!--fim do footer-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 
 </body>
